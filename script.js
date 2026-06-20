@@ -148,12 +148,45 @@ document.addEventListener("keydown", (event) => {
 
 contactForm?.addEventListener("submit", async (event) => {
   event.preventDefault();
-  const data = Object.fromEntries(new FormData(contactForm));
-  const subject = encodeURIComponent(`Portfolio inquiry: ${data.service || "Project"}`);
-  const body = encodeURIComponent(
-    `Name: ${data.name || ""}\nEmail: ${data.email || ""}\nService: ${data.service || ""}\n\n${data.message || ""}`
-  );
+  const submitButton = $("button[type='submit']", contactForm);
+  const originalButtonText = submitButton?.textContent;
 
-  window.location.href = `mailto:v.clainer11@gmail.com?subject=${subject}&body=${body}`;
-  if (formStatus) formStatus.textContent = "Opening your email app...";
+  if (submitButton) {
+    submitButton.disabled = true;
+    submitButton.textContent = "Sending...";
+  }
+
+  if (formStatus) {
+    formStatus.className = "form-status";
+    formStatus.textContent = "Sending your message...";
+  }
+
+  try {
+    const response = await fetch(contactForm.action, {
+      method: "POST",
+      body: new FormData(contactForm),
+      headers: { Accept: "application/json" },
+    });
+    const result = await response.json();
+
+    if (!response.ok || !result.success) {
+      throw new Error(result.message || "Your message could not be sent.");
+    }
+
+    contactForm.reset();
+    if (formStatus) {
+      formStatus.classList.add("is-success");
+      formStatus.textContent = "Message sent! I'll get back to you soon.";
+    }
+  } catch (error) {
+    if (formStatus) {
+      formStatus.classList.add("is-error");
+      formStatus.textContent = `${error.message} Please try again or email me directly.`;
+    }
+  } finally {
+    if (submitButton) {
+      submitButton.disabled = false;
+      submitButton.textContent = originalButtonText;
+    }
+  }
 });
