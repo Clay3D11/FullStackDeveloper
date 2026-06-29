@@ -605,6 +605,20 @@ li.projects-tags {
   content: ""
 }
 
+.project-visual-actions {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+  padding: 22px;
+  pointer-events: none
+}
+
 .project-visual:after {
   position: absolute;
   inset: auto 18px 18px auto;
@@ -646,6 +660,16 @@ li.projects-tags {
   transition: .18s
 }
 
+.project-visual-actions .project-link {
+  margin-top: 0;
+  border-color: rgba(255, 255, 255, .48);
+  color: #fff;
+  background: rgba(16, 16, 20, .62);
+  box-shadow: 0 16px 42px rgba(16, 16, 20, .28);
+  backdrop-filter: blur(14px);
+  pointer-events: auto
+}
+
 .project-link:after {
   margin-left: 9px;
   content: "->";
@@ -657,6 +681,11 @@ li.projects-tags {
   border-color: var(--ink);
   color: #fff;
   background: var(--ink)
+}
+
+.project-visual-actions .project-link:hover {
+  border-color: rgba(255, 255, 255, .82);
+  background: rgba(16, 16, 20, .88)
 }
 
 .visual-pos {
