@@ -494,6 +494,15 @@ li.projects-tags {
   margin-top: 0
 }
 
+.project-toggle-content {
+  display: grid;
+  gap: 10px
+}
+
+.project-toggle-content p {
+  margin-bottom: 0
+}
+
 .project-card,
 .service-list article {
   position: relative;
