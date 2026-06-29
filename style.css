@@ -619,6 +619,13 @@ li.projects-tags {
   pointer-events: none
 }
 
+.visual-pos .project-visual-actions {
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-content: center;
+  justify-content: space-between
+}
+
 .project-visual:after {
   position: absolute;
   inset: auto 18px 18px auto;
