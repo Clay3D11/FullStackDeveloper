@@ -76,6 +76,30 @@ $$("[data-tag-toggle]").forEach((button) => {
   setupToggle(button, document.getElementById(button.getAttribute("aria-controls")));
 });
 
+$$("#work .projects-tags").forEach((list, index) => {
+  if (list.closest(".project-tag-toggle")) return;
+
+  const wrapper = document.createElement("div");
+  const button = document.createElement("button");
+  const projectTitle = list.closest(".project-card")?.querySelector("h3")?.textContent?.trim();
+  const listId = list.id || `projectTags${index + 1}`;
+
+  list.id = listId;
+  list.hidden = true;
+  list.classList.add("tag-toggle-list");
+  wrapper.className = "tag-toggle project-tag-toggle";
+  button.className = "tag-toggle-button project-tag-toggle-button";
+  button.type = "button";
+  button.setAttribute("aria-expanded", "false");
+  button.setAttribute("aria-controls", listId);
+  button.setAttribute("aria-label", projectTitle ? `Toggle ${projectTitle} tags` : "Toggle project tags");
+  button.textContent = "View tags";
+
+  list.before(wrapper);
+  wrapper.append(button, list);
+  setupToggle(button, list);
+});
+
 const revealItems = $$(
   ".stats-band article, .section-heading, .project-card, .service-list article, .timeline article, .contact-form"
 );
