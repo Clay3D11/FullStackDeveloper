@@ -479,6 +479,21 @@ li.projects-tags {
   font-weight: 850
 }
 
+.project-tag-toggle {
+  gap: 10px;
+  margin: 0
+}
+
+.project-tag-toggle-button {
+  min-height: 38px;
+  padding: 0 13px;
+  font-size: .82rem
+}
+
+.project-tag-toggle .projects-tags {
+  margin-top: 0
+}
+
 .project-card,
 .service-list article {
   position: relative;
