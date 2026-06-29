@@ -79,25 +79,30 @@ $$("[data-tag-toggle]").forEach((button) => {
 $$("#work .projects-tags").forEach((list, index) => {
   if (list.closest(".project-tag-toggle")) return;
 
+  const card = list.closest(".project-card");
   const wrapper = document.createElement("div");
   const button = document.createElement("button");
-  const projectTitle = list.closest(".project-card")?.querySelector("h3")?.textContent?.trim();
-  const listId = list.id || `projectTags${index + 1}`;
+  const details = document.createElement("div");
+  const projectTitle = card?.querySelector("h3")?.textContent?.trim();
+  const paragraph = card ? $("p", card) : null;
+  const detailsId = `projectDetails${index + 1}`;
 
-  list.id = listId;
-  list.hidden = true;
-  list.classList.add("tag-toggle-list");
+  details.id = detailsId;
+  details.hidden = true;
+  details.className = "project-toggle-content tag-toggle-list";
   wrapper.className = "tag-toggle project-tag-toggle";
   button.className = "tag-toggle-button project-tag-toggle-button";
   button.type = "button";
   button.setAttribute("aria-expanded", "false");
-  button.setAttribute("aria-controls", listId);
-  button.setAttribute("aria-label", projectTitle ? `Toggle ${projectTitle} tags` : "Toggle project tags");
-  button.textContent = "View tags";
+  button.setAttribute("aria-controls", detailsId);
+  button.setAttribute("aria-label", projectTitle ? `Toggle ${projectTitle} details and tags` : "Toggle project details and tags");
+  button.textContent = "View details";
 
-  list.before(wrapper);
-  wrapper.append(button, list);
-  setupToggle(button, list);
+  (paragraph || list).before(wrapper);
+  if (paragraph) details.append(paragraph);
+  details.append(list);
+  wrapper.append(button, details);
+  setupToggle(button, details);
 });
 
 $$("#work .project-card").forEach((card) => {
