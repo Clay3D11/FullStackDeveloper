@@ -100,6 +100,19 @@ $$("#work .projects-tags").forEach((list, index) => {
   setupToggle(button, list);
 });
 
+$$("#work .project-card").forEach((card) => {
+  const visual = $(".project-visual", card);
+  const links = $$(".project-link", card);
+
+  if (!visual || !links.length || visual.querySelector(".project-visual-actions")) return;
+
+  const actions = document.createElement("div");
+  actions.className = "project-visual-actions";
+
+  links.forEach((link) => actions.append(link));
+  visual.append(actions);
+});
+
 const revealItems = $$(
   ".stats-band article, .section-heading, .project-card, .service-list article, .timeline article, .contact-form"
 );
