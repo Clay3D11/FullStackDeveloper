@@ -23,5 +23,5 @@ Static portfolio website for Clainer Ventura. This folder is ready to upload dir
 Custom domain:
 
 ```txt
-clainerjvl.com
+clainerdev.com
 ```
