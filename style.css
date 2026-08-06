@@ -704,6 +704,10 @@ li.projects-tags {
   background: rgba(16, 16, 20, .88)
 }
 
+.visual-universal {
+  background: url("assets/uni.png") center/cover
+}
+
 .visual-pos {
   background: url("assets/POS.png") center/cover
 }
@@ -732,9 +736,9 @@ li.projects-tags {
   background: url("assets/GymApp.png") center/cover
 }
 
-.visual-universal {
+/* .visual-universal {
   background: url("assets/Barbershop-Cover.png") center/cover
-}
+} */
 
 .visual-clainer {
   background: linear-gradient(135deg, rgba(255, 255, 255, .88) 0 20%, transparent 20% 100%), linear-gradient(45deg, #101014, #1f6f5b 46%, #e15f41)
