@@ -1402,6 +1402,16 @@ li.projects-tags {
     font-size: .72rem
   }
 
+  .roadmap-grid > a:first-child {
+    grid-column: 1 / -1;
+    justify-self: center
+  }
+
+  .roadmap-grid > a:first-child .button {
+    width: auto;
+    min-width: 160px
+  }
+
   h1 {
     font-size: clamp(1.85rem, 9vw, 3.2rem);
     white-space: nowrap
