@@ -229,6 +229,8 @@ h3 {
   margin-top: 34px
 }
 
+.roadmap-grid { display: contents }
+
 .button {
   position: relative;
   display: inline-flex;
@@ -1384,6 +1386,20 @@ li.projects-tags {
 
   .hero-actions .button {
     width: min(100%, 292px)
+  }
+
+  .roadmap-grid {
+    display: grid;
+    width: min(100%, 440px);
+    grid-template-columns: repeat(auto-fit, minmax(88px, 1fr));
+    gap: 8px
+  }
+
+  .roadmap-grid .button {
+    width: 100%;
+    min-width: 0;
+    padding-inline: 6px;
+    font-size: .72rem
   }
 
   h1 {
