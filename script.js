@@ -176,7 +176,12 @@ $$("[data-close-bio]").forEach((button) => {
   button.addEventListener("click", () => closeModal(bioModal));
 });
 
-$("[data-open-resume]")?.addEventListener("click", () => openModal(resumeModal));
+$$('[data-open-resume]').forEach((button) => {
+  button.addEventListener("click", () => {
+    if (bioModal && !bioModal.hidden) closeModal(bioModal);
+    openModal(resumeModal);
+  });
+});
 
 $$("[data-close-resume]").forEach((button) => {
   button.addEventListener("click", () => closeModal(resumeModal));
