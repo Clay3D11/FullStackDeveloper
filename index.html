@@ -73,7 +73,7 @@
             
             <button class="button secondary" type="button" data-open-bio>About me!</button>
             
-            <button class="button secondary" type="button" data-open-resume>Resume</button>
+            <!-- <button class="button secondary" type="button" data-open-resume>Resume</button> -->
 
             <!-- <a class="button secondary" href="./Resume.pdf" target="_blank"target="_blank">Resume PDF</a> -->
             
@@ -709,20 +709,29 @@
         </div>
         <div class="resume-body">
           <section>
-            <h3>About Me</h3>
+            <div class="tag-toggle bio-about">
+              <button class="tag-toggle-button" type="button" aria-expanded="false" aria-controls="bioAbout" data-tag-toggle>About Me</button>
+              <div class="bio-about-copy tag-toggle-list" id="bioAbout" hidden>
+
+            
             
             
             <p>I’m Clainer Ventura, a Full-Stack Software Developer and Creative Technologist with 6+ years of experience building digital experiences, business tools, and interactive solutions.
 
             <br>
+            <br>
             My work spans frontend and backend development, using technologies such as HTML, CSS, JavaScript, React, Node.js, MySQL, Git, GitHub, Docker, and Linux. I work across the full development lifecycle, from designing responsive UI/UX systems and building user-facing interfaces to developing backend functionality, managing databases, writing queries, and organizing application data.
+            <br>
             <br>
             
             I’m also experienced with VS Code, MySQL Workbench, PowerShell, Linux Terminal, Git Bash, and modern development workflows, giving me the ability to build, manage, test, and deploy applications across different environments.
             <br>
+            <br>
 
             Beyond software development, I combine technology with business development and creative media, including video editing, 3D modeling, and game development. My focus is building practical digital products and systems that connect software, data, business, and creativity.
             </p>
+              </div>
+            </div>
             
             
             
@@ -747,6 +756,8 @@
               The goal for this portfolio is to present the Limitless projects, my developer skills, and
               my creative services with a cleaner, more professional web presence.
             </p> -->
+
+
           </section>
           <section>
             <h3>Highlights</h3>
@@ -791,6 +802,7 @@
 
             </p>
           </section>
+          <button class="button secondary bio-resume-button" type="button" data-open-resume>Resume</button>
         </div>
       </article>
     </div>
