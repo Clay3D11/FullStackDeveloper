@@ -1220,6 +1220,13 @@ li.projects-tags {
   font-size: 1.02rem
 }
 
+.bio-about-copy {
+  display: grid;
+  gap: 12px
+}
+
+.bio-resume-button { justify-self: start }
+
 .reveal-ready {
   opacity: 0;
   transform: translateY(18px);
