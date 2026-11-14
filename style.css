@@ -573,8 +573,7 @@ pre { margin: 0; padding: 20px; white-space: pre-wrap }
 }
 
 /* ---------- Sections ---------- */
-.section,
-.contact-section {
+.section {
   content-visibility: auto;
   contain-intrinsic-size: 1px 900px;
   padding: clamp(48px, 7vw, 88px) max(5vw, calc((100vw - var(--max))/2))
@@ -881,8 +880,7 @@ li.projects-tags {
 
 .project-card p,
 .service-list p,
-.timeline p,
-.contact-section p { color: var(--muted) }
+.timeline p { color: var(--muted) }
 
 .project-visual {
   position: relative;
@@ -1044,31 +1042,25 @@ li.projects-tags {
   font-size: .9rem
 }
 
-/* ---------- Contact ---------- */
-.contact-section {
-  display: grid;
-  grid-template-columns: minmax(0, .8fr) minmax(0, 1fr);
-  gap: clamp(32px, 6vw, 90px);
-  align-items: start;
-  margin: 0 max(3vw, calc((100vw - var(--max))/2 - 40px)) clamp(60px, 8vw, 100px);
-  padding: clamp(40px, 6vw, 80px);
-  border: 1px solid var(--line-strong);
-  border-radius: 28px;
-  color: #fff;
+/* ---------- Contact (card on the page + Contact popup) ---------- */
+#contact { padding-bottom: clamp(60px, 8vw, 100px) } /* last card before the footer */
+
+.contact-launch {
   background:
-    radial-gradient(600px 400px at 0% 0%, rgba(111, 140, 255, .25), transparent 60%),
-    radial-gradient(600px 400px at 100% 100%, rgba(52, 211, 153, .14), transparent 60%),
-    var(--panel);
-  box-shadow: var(--shadow-strong)
+    radial-gradient(500px 200px at 0% 0%, rgba(111, 140, 255, .2), transparent 70%),
+    radial-gradient(500px 200px at 100% 100%, rgba(52, 211, 153, .12), transparent 70%),
+    var(--panel)
 }
 
-.contact-copy { position: sticky; top: 112px }
+.contact-launch .eyebrow,
+.contact-dialog .eyebrow { color: var(--gold) }
 
-.contact-section .eyebrow { color: var(--gold) }
+.resume-panel.contact-dialog { width: min(640px, calc(100vw - 28px)) }
 
-.contact-section h2 { margin-bottom: 20px }
-
-.contact-section p { color: rgba(255, 255, 255, .7) }
+.contact-dialog .contact-form {
+  margin: 22px clamp(16px, 3vw, 32px) 32px;
+  box-shadow: none
+}
 
 .contact-email {
   display: inline-block;
@@ -1443,10 +1435,7 @@ li.projects-tags {
 }
 
 @media (max-width: 980px) {
-  .hero-section,
-  .contact-section { grid-template-columns: minmax(0, 1fr) }
-
-  .contact-copy { position: static }
+  .hero-section { grid-template-columns: minmax(0, 1fr) }
 
   .hero-copy { order: 0 }
 
@@ -1577,12 +1566,6 @@ li.projects-tags {
   .stats-band article:last-child,
   .service-list article:last-child,
   #projectsModal .project-card:last-child { grid-column: auto }
-
-  .contact-section {
-    margin: 0 12px 60px;
-    padding: 28px 18px;
-    border-radius: 20px
-  }
 
   .footer-bottom { flex-direction: column }
 

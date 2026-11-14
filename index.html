@@ -30,7 +30,7 @@
         <button type="button" data-open-projects>Work</button>
         <button type="button" data-open-services>Services</button>
         <button type="button" data-open-process>Process</button>
-        <a href="#contact">Contact</a>
+        <button type="button" data-open-contact>Contact</button>
       </nav>
     </header>
 
@@ -67,7 +67,7 @@
             I'm a Full-Stack Developer specializing in modern web applications, scalable digital systems, and user-focused experiences powered by creativity and clean engineering.
           </p>
           <div class="hero-actions">
-            <a class="button primary" href="#contact">Start a project</a>
+            <a class="button primary" href="#contact" data-open-contact>Start a project</a>
             <button class="button secondary" type="button" data-open-bio>About me!</button>
             <!-- <button class="button secondary" type="button" data-open-resume>Resume</button> -->
             <!-- <a class="button secondary" href="./Resume.pdf" target="_blank">Resume PDF</a> -->
@@ -230,35 +230,21 @@
         </button>
       </section>
 
-      <!-- Contact (Web3Forms) -->
-      <section class="contact-section" id="contact">
-        <div class="contact-copy">
-          <p class="eyebrow">Contact</p>
-          <h2>Tell me what you want to build.</h2>
-          <p>
-            Have a project, an idea, or a question? Send me a message and I'll get
-            back to you by email.
-          </p>
-          <!-- <a class="contact-email" href="mailto:v.clainer11@gmail.com">v.clainer11@gmail.com</a> -->
-        </div>
-
-        <form action="https://api.web3forms.com/submit" method="POST" class="contact-form" id="contactForm">
-          <input type="hidden" name="access_key" value="bdadfbc7-884d-4579-ac6b-cfbb42e64705" />
-          <input type="hidden" name="subject" value="New portfolio inquiry" />
-          <input type="checkbox" name="botcheck" class="form-botcheck" tabindex="-1" autocomplete="off" />
-
-          <label for="contactName">Name</label>
-          <input id="contactName" type="text" name="name" placeholder="Your name" autocomplete="name" required />
-
-          <label for="contactEmail">Email</label>
-          <input id="contactEmail" type="email" name="email" placeholder="you@example.com" autocomplete="email" required />
-
-          <label for="contactMessage">Message</label>
-          <textarea id="contactMessage" name="message" rows="6" placeholder="Tell me about your project or ask a question..." required></textarea>
-
-          <button class="button contact-submit" type="submit">Send message</button>
-          <p class="form-status" role="status" aria-live="polite"></p>
-        </form>
+      <!-- Contact: one compact card. The Web3Forms form lives in the Contact popup (#contactModal). -->
+      <section class="section work-section" id="contact">
+        <button class="work-launch contact-launch" type="button" data-open-contact aria-haspopup="dialog">
+          <span class="work-launch-text">
+            <span class="eyebrow">Contact</span>
+            <strong>Let's talk</strong>
+            <span class="work-launch-copy">Tell me what you want to build.</span>
+          </span>
+          <!-- One pill per form field, added by script.js -->
+          <span class="work-launch-previews launch-steps" aria-hidden="true" data-preview-for="#contactForm label"></span>
+          <span class="work-launch-cta">
+            <span class="work-launch-count">Replies by <b>email</b></span>
+            <span class="work-launch-open">Send a message <span aria-hidden="true">&rarr;</span></span>
+          </span>
+        </button>
       </section>
     </main>
 
@@ -278,13 +264,13 @@
           <a href="#work" data-open-projects>Projects</a>
           <a href="#services" data-open-services>Services</a>
           <a href="#process" data-open-process>Process</a>
-          <a href="#contact">Contact</a>
+          <a href="#contact" data-open-contact>Contact</a>
         </nav>
       </div>
 
       <div class="footer-column">
         <h2>Connect</h2>
-        <a href="#contact">v.clainer11@gmail.com</a>
+        <a href="#contact" data-open-contact>v.clainer11@gmail.com</a>
         <a href="https://clainerDev.com/" target="_blank" rel="noreferrer">ClainerDev.com</a>
         <a href="https://ko-fi.com/devs_support" target="_blank" rel="noreferrer">Support projects</a>
       </div>
@@ -616,6 +602,40 @@
             <p>Prepare deployment, final assets, contact flow, and future update points.</p>
           </article>
         </div>
+      </article>
+    </div>
+
+    <!-- Contact popup (opened by [data-open-contact]) -->
+    <div class="resume-modal launch-modal" id="contactModal" role="dialog" aria-modal="true" aria-labelledby="contactTitle" hidden>
+      <div class="resume-backdrop" data-close-contact></div>
+      <article class="resume-panel launch-dialog contact-dialog">
+        <button class="resume-close" type="button" aria-label="Close contact" data-close-contact>
+          <span></span>
+          <span></span>
+        </button>
+        <div class="resume-header">
+          <p class="eyebrow">Contact</p>
+          <h2 id="contactTitle">Tell me what you want to build.</h2>
+          <p>Have a project, an idea, or a question? Send me a message and I'll get back to you by email.</p>
+          <!-- <a class="contact-email" href="mailto:v.clainer11@gmail.com">v.clainer11@gmail.com</a> -->
+        </div>
+        <form action="https://api.web3forms.com/submit" method="POST" class="contact-form" id="contactForm">
+          <input type="hidden" name="access_key" value="bdadfbc7-884d-4579-ac6b-cfbb42e64705" />
+          <input type="hidden" name="subject" value="New portfolio inquiry" />
+          <input type="checkbox" name="botcheck" class="form-botcheck" tabindex="-1" autocomplete="off" />
+
+          <label for="contactName">Name</label>
+          <input id="contactName" type="text" name="name" placeholder="Your name" autocomplete="name" required />
+
+          <label for="contactEmail">Email</label>
+          <input id="contactEmail" type="email" name="email" placeholder="you@example.com" autocomplete="email" required />
+
+          <label for="contactMessage">Message</label>
+          <textarea id="contactMessage" name="message" rows="6" placeholder="Tell me about your project or ask a question..." required></textarea>
+
+          <button class="button contact-submit" type="submit">Send message</button>
+          <p class="form-status" role="status" aria-live="polite"></p>
+        </form>
       </article>
     </div>
 

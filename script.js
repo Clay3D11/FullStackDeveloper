@@ -2,10 +2,10 @@
    ClainerDev.com
    1. Helpers
    2. Toggles (core skills, resume tags and details, project details)
-   3. Projects, Services, Process cards + popup content
+   3. Projects, Services, Process, Contact cards + popup content
    4. Scroll reveal
    5. Mobile menu
-   6. Popups (Projects, Services, Process, Bio, Resume)
+   6. Popups (Projects, Services, Process, Contact, Bio, Resume)
    7. Contact form (Web3Forms)
    ========================================================================== */
 
@@ -18,6 +18,7 @@ const siteNav = $(".site-nav");
 const projectsModal = $("#projectsModal");
 const servicesModal = $("#servicesModal");
 const processModal = $("#processModal");
+const contactModal = $("#contactModal");
 const bioModal = $(".bio-modal");
 const resumeModal = $("[aria-labelledby='resumeTitle']");
 const contactForm = $("#contactForm");
@@ -99,7 +100,7 @@ $$("[data-tag-toggle]").forEach((button) => {
   setupToggle(button, document.getElementById(button.getAttribute("aria-controls")));
 });
 
-/* ---------- 3. Projects, Services, Process cards + popup content ---------- */
+/* ---------- 3. Projects, Services, Process, Contact cards + popup content ---------- */
 const projectCards = $$("#projectsModal .project-card");
 
 /* Each card: description and tags collapse behind "View details" */
@@ -154,7 +155,7 @@ projectCards.forEach((card) => {
   launchPreviews.append(thumb);
 });
 
-/* Services + Process cards: count and previews come from the popup content.
+/* Services, Process, Contact cards: count and previews come from the popup content.
    [data-count-for="<selector>"] shows how many items match,
    [data-preview-for="<selector>"] gets one small pill per match (its text). */
 $$("[data-count-for]").forEach((el) => (el.textContent = $$(el.dataset.countFor).length));
@@ -169,7 +170,7 @@ $$("[data-preview-for]").forEach((previews) => {
 });
 
 /* ---------- 4. Scroll reveal ---------- */
-const revealItems = $$(".stats-band article, .section-heading, .work-launch, .contact-form");
+const revealItems = $$(".stats-band article, .section-heading, .work-launch");
 
 if ("IntersectionObserver" in window) {
   const revealObserver = new IntersectionObserver(
@@ -222,7 +223,7 @@ function closeModal(modal) {
 }
 
 /* [data-open-<name>] opens a popup, [data-close-<name>] closes it */
-const popups = { projects: projectsModal, services: servicesModal, process: processModal, bio: bioModal, resume: resumeModal };
+const popups = { projects: projectsModal, services: servicesModal, process: processModal, contact: contactModal, bio: bioModal, resume: resumeModal };
 
 Object.entries(popups).forEach(([name, modal]) => {
   $$(`[data-open-${name}]`).forEach((opener) => {
