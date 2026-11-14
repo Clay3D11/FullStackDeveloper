@@ -10,8 +10,9 @@ The site is built with **vanilla HTML, CSS, and JavaScript**. It uses no framewo
 ## Features
 
 - **Dark, responsive design** that works on phones, tablets, and desktops
-- **Project showcase**: live links to each project, with expandable details and tech tags
-- **Bio and resume popups**: open, close, and Escape-key handling are written in plain JavaScript
+- **Project showcase**: a compact card on the page opens a Projects popup with live links to each project, expandable details, and tech tags
+- **Services and process cards**: matching compact cards open the Services (capabilities) and Process (workflow) popups
+- **Projects, services, process, bio, and resume popups**: open, close, and Escape-key handling are written in plain JavaScript
 - **Downloadable resume** (`resume.pdf`)
 - **Contact form**: sends messages through the [Web3Forms](https://web3forms.com) API with `fetch`, shows loading, success, and error states, and includes a spam honeypot
 - **Scroll animations** built on `IntersectionObserver`, which turn off automatically when the visitor prefers reduced motion
@@ -35,9 +36,9 @@ HTML5 · CSS3 (Grid, Flexbox, custom properties, container queries) · JavaScrip
 ## Project structure
 
 ```
-├── index.html     # Page markup: hero, projects, services, process, contact, and the bio and resume popups
+├── index.html     # Page markup: hero, projects/services/process cards, contact, and the projects, services, process, bio, and resume popups
 ├── style.css      # Theme, layout, and responsive styles
-├── script.js      # Menu, popups, toggles, scroll animations, and contact form
+├── script.js      # Toggles, projects/services/process cards, scroll animations, menu, popups, and contact form
 ├── resume.pdf     # Downloadable resume
 ├── assets/        # Images and project previews
 ├── CNAME          # Custom domain (clainerdev.com)

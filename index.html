@@ -12,7 +12,7 @@
   </head>
   <body>
 
-
+    <!-- ==================== Header ==================== -->
     <header class="site-header">
       <a class="brand" href="https://github.com/clay3d11" target="_blank" rel="noreferrer" aria-label="Clainer Ventura on GitHub">
         <span><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .7a11.5 11.5 0 0 0-3.6 22.4c.6.1.8-.2.8-.6v-2.2c-3.3.7-4-1.4-4-1.4-.5-1.4-1.3-1.7-1.3-1.7-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1.1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.8-1.6-2.6-.3-5.4-1.3-5.4-5.7 0-1.3.5-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.2 1.2a11 11 0 0 1 5.8 0c2.2-1.5 3.2-1.2 3.2-1.2.6 1.6.2 2.8.1 3.1.8.8 1.2 1.8 1.2 3.1 0 4.4-2.7 5.4-5.4 5.7.4.4.8 1.1.8 2.2v3.3c0 .4.2.7.8.6A11.5 11.5 0 0 0 12 .7Z"/></svg></span>
@@ -27,17 +27,17 @@
         <a href="#">Home</a>
         <button type="button" data-open-bio>Bio</button>
         <a href="#businesscard">BusinessCard</a>
-        <a href="#work">Work</a>
-        <a href="#services">Services</a>
-        <a href="#process">Process</a>
+        <button type="button" data-open-projects>Work</button>
+        <button type="button" data-open-services>Services</button>
+        <button type="button" data-open-process>Process</button>
         <a href="#contact">Contact</a>
       </nav>
     </header>
 
-
+    <!-- ==================== Main ==================== -->
     <main id="home">
 
-
+      <!-- Hero: business card, actions, road maps, core skills -->
       <section class="hero-section">
         <div class="hero-media" aria-hidden="true">
           <div class="code-window dev-loop">
@@ -65,80 +65,30 @@
           <!-- <p class="eyebrow">| Full-stack developer |</p> -->
           <p>
             I'm a Full-Stack Developer specializing in modern web applications, scalable digital systems, and user-focused experiences powered by creativity and clean engineering.
-
           </p>
           <div class="hero-actions">
-            
             <a class="button primary" href="#contact">Start a project</a>
-            
             <button class="button secondary" type="button" data-open-bio>About me!</button>
-            
             <!-- <button class="button secondary" type="button" data-open-resume>Resume</button> -->
+            <!-- <a class="button secondary" href="./Resume.pdf" target="_blank">Resume PDF</a> -->
+            <button class="button secondary" type="button" data-open-projects>View work</button>
 
-            <!-- <a class="button secondary" href="./Resume.pdf" target="_blank"target="_blank">Resume PDF</a> -->
-            
-            <a class="button secondary" href="#work">View work</a>
-            
-            
-            
-            <div class="roadmap-grid">
-
-
-            <a href="https://roadmap.sh/dashboard"><button class="button primary" type="button"> ◈Road Maps◈</button></a>
-            
-
-
-
-
-
-            
-
-
-
-            <a href="https://roadmap.sh/full-stack"><button class="button secondary" type="button">Full-Stack</button></a>
-
-
-            <a href="https://roadmap.sh/frontend"><button class="button secondary" type="button">Frontend</button></a>
-
-
-
-            <a href="https://roadmap.sh/backend"><button class="button secondary" type="button">Backend</button></a>
-            
-
-
-            <a href="https://roadmap.sh/git-github"><button class="button secondary" type="button">Git-GitHub</button></a>
-
-
-
-            
-            <a href="https://roadmap.sh/docker"><button class="button secondary" type="button">Docker</button></a>
-            
-            <a href="https://roadmap.sh/sql"><button class="button secondary" type="button">MySQL</button></a>
-            
-            <a href="https://roadmap.sh/nodejs"><button class="button secondary" type="button">Node.js</button></a>
-            
-            <a href="https://roadmap.sh/javascript"><button class="button secondary" type="button">JavaScript</button></a>
-            
-            <a href="https://roadmap.sh/linux"><button class="button secondary" type="button">Linux</button></a>
-            
-            <a href="https://roadmap.sh/shell-bash"><button class="button secondary" type="button">Shell-Bash</button></a>
-            
-            <a href="https://roadmap.sh/api-security-best-practices"><button class="button secondary" type="button">API Security</button></a>
-            
-            
-            <a href="https://roadmap.sh/system-design"><button class="button secondary" type="button">System Design</button></a>
-
-
-
-
-            </div>
-            
-            
-            
-
-
-
-
+            <!-- Road maps (roadmap.sh) -->
+            <nav class="roadmap-grid" aria-label="Developer road maps">
+              <a class="button primary" href="https://roadmap.sh/dashboard">◈Road Maps◈</a>
+              <a class="button secondary" href="https://roadmap.sh/full-stack">Full-Stack</a>
+              <a class="button secondary" href="https://roadmap.sh/frontend">Frontend</a>
+              <a class="button secondary" href="https://roadmap.sh/backend">Backend</a>
+              <a class="button secondary" href="https://roadmap.sh/git-github">Git-GitHub</a>
+              <a class="button secondary" href="https://roadmap.sh/docker">Docker</a>
+              <a class="button secondary" href="https://roadmap.sh/sql">MySQL</a>
+              <a class="button secondary" href="https://roadmap.sh/nodejs">Node.js</a>
+              <a class="button secondary" href="https://roadmap.sh/javascript">JavaScript</a>
+              <a class="button secondary" href="https://roadmap.sh/linux">Linux</a>
+              <a class="button secondary" href="https://roadmap.sh/shell-bash">Shell-Bash</a>
+              <a class="button secondary" href="https://roadmap.sh/api-security-best-practices">API Security</a>
+              <a class="button secondary" href="https://roadmap.sh/system-design">System Design</a>
+            </nav>
           </div>
           <div class="tag-toggle hero-skill-toggle">
             <button class="tag-toggle-button" type="button" aria-expanded="false" aria-controls="heroSkills" data-tag-toggle>
@@ -184,21 +134,20 @@
         </div>
       </section>
 
-
+      <!-- Stats -->
       <section class="stats-band" aria-label="Portfolio highlights">
         <article>
           <strong>20+</strong>
           <span>web concepts built</span>
         </article>
-       
-       
+
         <!-- <article>
 
           <strong>6</strong>
           <span>Core Specialties</span>
-          
-          <span>Full-Stack Software Developer</span> 
-            
+
+          <span>Full-Stack Software Developer</span>
+
           <span>Game Developer</span>
 
           <span>UX/UI Designer</span>
@@ -213,11 +162,8 @@
 
           <span>Business Tools</span>
 
-
-
         </article> -->
-       
-       
+
         <article>
           <strong>100%</strong>
           <span>custom implementation</span>
@@ -231,35 +177,153 @@
           <span><h4>LimitlessPOS.co</h4></span>
           <span><h4>LimitlessFitness.com</h4></span>
         </article>
-     
       </section>
 
+      <!-- Projects: one compact card. The project cards live in the Projects popup (#projectsModal). -->
+      <section class="section work-section" id="work">
+        <button class="work-launch" type="button" data-open-projects aria-haspopup="dialog">
+          <span class="work-launch-text">
+            <span class="eyebrow">Selected work &amp; Projects</span>
+            <strong>Projects</strong>
+            <span class="work-launch-copy">POS systems, brand websites, and creative platforms.</span>
+          </span>
+          <!-- One preview per project card, added by script.js -->
+          <span class="work-launch-previews" aria-hidden="true"></span>
+          <span class="work-launch-cta">
+            <span class="work-launch-count"><b data-project-count>0</b> live projects</span>
+            <span class="work-launch-open">Open projects <span aria-hidden="true">&rarr;</span></span>
+          </span>
+        </button>
+      </section>
 
-      <section class="section" id="work">
-        <div class="section-heading">
-          <p class="eyebrow">Selected work & Projects</p>
-          <!-- <h2>Projects & Work:</h2> -->
+      <!-- Services: one compact card. The service list lives in the Services popup (#servicesModal). -->
+      <section class="section work-section" id="services">
+        <button class="work-launch" type="button" data-open-services aria-haspopup="dialog">
+          <span class="work-launch-text">
+            <span class="eyebrow">Capabilities</span>
+            <strong>Services</strong>
+            <span class="work-launch-copy">What I can build for you.</span>
+          </span>
+          <!-- One number badge per service, added by script.js -->
+          <span class="work-launch-previews launch-badges" aria-hidden="true" data-preview-for="#servicesModal .service-list article > span"></span>
+          <span class="work-launch-cta">
+            <span class="work-launch-count"><b data-count-for="#servicesModal .service-list article">0</b> services</span>
+            <span class="work-launch-open">Open services <span aria-hidden="true">&rarr;</span></span>
+          </span>
+        </button>
+      </section>
+
+      <!-- Process: one compact card. The steps live in the Process popup (#processModal). -->
+      <section class="section work-section" id="process">
+        <button class="work-launch" type="button" data-open-process aria-haspopup="dialog">
+          <span class="work-launch-text">
+            <span class="eyebrow">Workflow</span>
+            <strong>Process</strong>
+            <span class="work-launch-copy">A clear path from idea to launch.</span>
+          </span>
+          <!-- One pill per step, added by script.js -->
+          <span class="work-launch-previews launch-steps" aria-hidden="true" data-preview-for="#processModal .timeline article > span"></span>
+          <span class="work-launch-cta">
+            <span class="work-launch-count"><b data-count-for="#processModal .timeline article">0</b> steps</span>
+            <span class="work-launch-open">Open process <span aria-hidden="true">&rarr;</span></span>
+          </span>
+        </button>
+      </section>
+
+      <!-- Contact (Web3Forms) -->
+      <section class="contact-section" id="contact">
+        <div class="contact-copy">
+          <p class="eyebrow">Contact</p>
+          <h2>Tell me what you want to build.</h2>
+          <p>
+            Have a project, an idea, or a question? Send me a message and I'll get
+            back to you by email.
+          </p>
+          <!-- <a class="contact-email" href="mailto:v.clainer11@gmail.com">v.clainer11@gmail.com</a> -->
+        </div>
+
+        <form action="https://api.web3forms.com/submit" method="POST" class="contact-form" id="contactForm">
+          <input type="hidden" name="access_key" value="bdadfbc7-884d-4579-ac6b-cfbb42e64705" />
+          <input type="hidden" name="subject" value="New portfolio inquiry" />
+          <input type="checkbox" name="botcheck" class="form-botcheck" tabindex="-1" autocomplete="off" />
+
+          <label for="contactName">Name</label>
+          <input id="contactName" type="text" name="name" placeholder="Your name" autocomplete="name" required />
+
+          <label for="contactEmail">Email</label>
+          <input id="contactEmail" type="email" name="email" placeholder="you@example.com" autocomplete="email" required />
+
+          <label for="contactMessage">Message</label>
+          <textarea id="contactMessage" name="message" rows="6" placeholder="Tell me about your project or ask a question..." required></textarea>
+
+          <button class="button contact-submit" type="submit">Send message</button>
+          <p class="form-status" role="status" aria-live="polite"></p>
+        </form>
+      </section>
+    </main>
+
+    <!-- ==================== Footer ==================== -->
+    <footer class="portfolio-footer">
+      <div class="footer-main">
+        <a class="footer-mark" href="#home" aria-label="Back to top">
+          <span>CV7</span>
+          <strong>Clainer Ventura</strong>
+        </a>
+        <p>Full-stack developer building POS systems, brand websites, dashboards, creative media platforms, and polished digital experiences for the Limitless project network.</p>
+      </div>
+
+      <div class="footer-column">
+        <h2>Explore</h2>
+        <nav aria-label="Footer navigation">
+          <a href="#work" data-open-projects>Projects</a>
+          <a href="#services" data-open-services>Services</a>
+          <a href="#process" data-open-process>Process</a>
+          <a href="#contact">Contact</a>
+        </nav>
+      </div>
+
+      <div class="footer-column">
+        <h2>Connect</h2>
+        <a href="#contact">v.clainer11@gmail.com</a>
+        <a href="https://clainerDev.com/" target="_blank" rel="noreferrer">ClainerDev.com</a>
+        <a href="https://ko-fi.com/devs_support" target="_blank" rel="noreferrer">Support projects</a>
+      </div>
+
+      <div class="footer-bottom">
+        <span>Universal Limitless LLC</span>
+        <span>Designed by Clainer Ventura</span>
+        <span>2026 All rights reserved.</span>
+      </div>
+    </footer>
+
+    <!-- ==================== Popups ==================== -->
+
+    <!-- Projects popup (opened by [data-open-projects]) -->
+    <div class="resume-modal projects-modal" id="projectsModal" role="dialog" aria-modal="true" aria-labelledby="projectsTitle" hidden>
+      <div class="resume-backdrop" data-close-projects></div>
+      <article class="resume-panel projects-dialog">
+        <button class="resume-close" type="button" aria-label="Close projects" data-close-projects>
+          <span></span>
+          <span></span>
+        </button>
+        <div class="resume-header">
+          <p class="eyebrow">Selected work &amp; Projects</p>
+          <h2 id="projectsTitle">Projects</h2>
+          <p>Live business apps, brand websites, and creative platforms from the Limitless network.</p>
         </div>
         <div class="project-grid">
-
-
-
-
-          <!-- lIMITLESS POS -->
+          <!-- Universal Limitless -->
           <article class="project-card">
             <div class="project-visual visual-universal"></div>
             <div>
               <span>Universal Limitless</span>
 
-
               <!-- <p>A full-stack business tool concept for inventory, orders, sales activity, and daily operations.</p> -->
 
-
               <p>
-              Universal Limitless is a modern commerce platform built to power businesses with seamless payments, intelligent inventory, customer management, real-time analytics, and scalable multi-location operations.
+                Universal Limitless is a modern commerce platform built to power businesses with seamless payments, intelligent inventory, customer management, real-time analytics, and scalable multi-location operations.
               </p>
-              
-              
+
               <ul class="projects-tags" aria-label="Universal Limitless project technologies">
                 <li>VS Code Editor</li>
                 <li>HTML</li>
@@ -273,35 +337,25 @@
                 <li>Responsive Designs</li>
               </ul>
 
-              <a class="project-link" href="https://universallimitless.com/"  aria-label="View Universal Limitless website">UniversalLimitless.com</a>
-              
-              <!-- <a class="project-link" href="https://clay3d11.github.io/POS-Demo/"  aria-label="View POS - Point of Sales Application Demo">Limitless POS Demo!</a> -->
+              <a class="project-link" href="https://universallimitless.com/" aria-label="View Universal Limitless website">UniversalLimitless.com</a>
 
+              <!-- <a class="project-link" href="https://clay3d11.github.io/POS-Demo/" aria-label="View POS - Point of Sales Application Demo">Limitless POS Demo!</a> -->
             </div>
           </article>
 
-
-
-
-
-
-
-          <!-- lIMITLESS POS -->
+          <!-- Limitless POS -->
           <article class="project-card">
             <div class="project-visual visual-pos"></div>
             <div>
               <span>Business APP - POS (Any Business)</span>
 
-
               <!-- <p>A full-stack business tool concept for inventory, orders, sales activity, and daily operations.</p> -->
 
-
               <p>
-              Limitless POS showcase for a fast retail POS business, built to present payments,
-              orders, inventory, customer profiles, analytics, and multi-location growth.
+                Limitless POS showcase for a fast retail POS business, built to present payments,
+                orders, inventory, customer profiles, analytics, and multi-location growth.
               </p>
-              
-              
+
               <ul class="projects-tags" aria-label="Limitless POS project technologies">
                 <li>VS Code Editor</li>
                 <li>HTML</li>
@@ -315,10 +369,9 @@
                 <li>Responsive Designs</li>
               </ul>
 
-              <a class="project-link" href="https://clay3d11.github.io/POS-PointOfSalesWebsite/"  aria-label="View POS - Point of Sales Application project">LimitlessPOS.co</a>
-              
-              <a class="project-link" href="https://clay3d11.github.io/POS-Demo/"  aria-label="View POS - Point of Sales Application Demo">Limitless POS Demo!</a>
+              <a class="project-link" href="https://clay3d11.github.io/POS-PointOfSalesWebsite/" aria-label="View POS - Point of Sales Application project">LimitlessPOS.co</a>
 
+              <a class="project-link" href="https://clay3d11.github.io/POS-Demo/" aria-label="View POS - Point of Sales Application Demo">Limitless POS Demo!</a>
             </div>
           </article>
 
@@ -327,9 +380,7 @@
             <div class="project-visual visual-gym"></div>
             <div>
               <span>Business APP - Gym/Fitness POS</span>
-              <p>Limitless POS systems for gyms and fitness businesses, built to streamline memberships, payments, scheduling, and daily operations.
-              </p>
-
+              <p>Limitless POS systems for gyms and fitness businesses, built to streamline memberships, payments, scheduling, and daily operations.</p>
 
               <ul class="projects-tags" aria-label="GYM POS project technologies">
                 <li>VS Code Editor</li>
@@ -348,15 +399,12 @@
             </div>
           </article>
 
-
-          <!--Barber POS -->
+          <!-- Barber Shop POS -->
           <!-- <article class="project-card">
             <div class="project-visual visual-universal"></div>
             <div>
               <span>Business APP - BarberShop POS</span>
-              <p>Advanced barbershop POS systems designed to simplify bookings, manage customers, process payments, track products, and elevate the client experience.
-              </p>
-
+              <p>Advanced barbershop POS systems designed to simplify bookings, manage customers, process payments, track products, and elevate the client experience.</p>
 
               <ul class="projects-tags" aria-label="Barber Shop POS project technologies">
                 <li>VS Code Editor</li>
@@ -378,8 +426,6 @@
                 <li>Responsive Designs</li>
               </ul>
 
-
-
               <a class="project-link" href="https://clay3d11.github.io/BarberShop/" aria-label="View Barber Shop project">View project</a>
             </div>
           </article> -->
@@ -391,9 +437,8 @@
               <span>Limitless Music platform - Marketing Agency</span>
               <p>A streaming and showcase hub for artists to publish music, videos, and creative portfolios.</p>
 
-
               <ul class="projects-tags" aria-label="LimitlessMusic.app project technologies">
-               <li>VS Code Editor</li>
+                <li>VS Code Editor</li>
                 <li>HTML</li>
                 <li>CSS</li>
                 <li>JavaScript</li>
@@ -412,36 +457,17 @@
                 <li>Responsive Designs</li>
               </ul>
 
-
               <a class="project-link" href="https://limitlessmusic.app/" aria-label="View LimitlessMusic.app project">LimitlessMusic.app</a>
             </div>
           </article> -->
 
-          <!-- Limitless Studio - Music Videos / Ads / Films / Long-Short / Professional Editing / Marketing Agency -->
-
-
+          <!-- Limitless Studio: Music Videos / Ads / Films / Long-Short / Professional Editing / Marketing Agency -->
           <article class="project-card">
             <div class="project-visual visual-frame"></div>
             <div>
-              <span> 
-                
-                <span>
-                  
+              <span><a href="https://clay3d11.github.io/LimitlessStudio-VideoShowcase/" aria-label="View Limitless Studio project">Music Videos</a> / Ads / Films / Long-Short / Professional Editing / Marketing Agency</span>
 
-                  <a  href="https://clay3d11.github.io/LimitlessStudio-VideoShowcase/" aria-label="View Limitless Studio project">Music Videos</a>
-
-
-                  
-                  
-                </span>
-              
-              / Ads / Films / Long-Short / Professional Editing / Marketing Agency</span>
-
-
-
-
-              <p>A next-generation creative studio crafting cinematic digital art, collectible visuals, immersive design experiences, and culture-driven visual storytelling.
-              </p>
+              <p>A next-generation creative studio crafting cinematic digital art, collectible visuals, immersive design experiences, and culture-driven visual storytelling.</p>
 
               <ul class="projects-tags" aria-label="Limitless Studio project technologies">
                 <li>VS Code Editor</li>
@@ -457,17 +483,8 @@
               </ul>
 
               <a class="project-link" href="https://clay3d11.github.io/LimitlessStudio/" aria-label="View Limitless Studio project">Limitless Studio</a>
-              
-              
-              
+
               <!-- <a class="project-link" href="https://clay3d11.github.io/CJVL7/videoedits.html" aria-label="View Limitless Studio project">Limitless Studio #2</a> -->
-
-
-
-
-
-
-
             </div>
           </article>
 
@@ -478,8 +495,7 @@
               <span>Attn: Realtors! - Professional Real Estate Video Edits! - Marketing Agency</span>
               <p>Real estate video editing and marketing visuals built to make property listings stand out.</p>
 
-
-               <ul class="projects-tags" aria-label="LimitlessReels.com project technologies">
+              <ul class="projects-tags" aria-label="LimitlessReels.com project technologies">
                 <li>VS Code Editor</li>
                 <li>HTML</li>
                 <li>CSS</li>
@@ -491,19 +507,16 @@
                 <li>Responsive Designs</li>
               </ul>
 
-
-
               <a class="project-link" href="http://limitlessreels.com/" aria-label="View LimitlessReels.com project">LimitlessReels.com</a>
             </div>
           </article>
 
-
+          <!-- LimitlessVisual.com art store -->
           <!-- <article class="project-card">
             <div class="project-visual visual-visual"></div>
             <div>
               <span>Art E-Commerce Online Store</span>
               <p>A visual art store concept for premium 3D artwork, framed prints, and digital collectibles.</p>
-
 
               <ul class="projects-tags" aria-label="LimitlessVisual.com project technologies">
                 <li>VS Code Editor</li>
@@ -522,22 +535,25 @@
                 <li>Responsive Designs</li>
               </ul>
 
-
               <a class="project-link" href="#" aria-label="View LimitlessVisual.com project">Coming Soon!</a>
             </div>
           </article> -->
-
-          
-
-
         </div>
-      </section>
+      </article>
+    </div>
 
-
-      <section class="section split-section" id="services">
-        <div class="section-heading">
+    <!-- Services popup (opened by [data-open-services]) -->
+    <div class="resume-modal launch-modal" id="servicesModal" role="dialog" aria-modal="true" aria-labelledby="servicesTitle" hidden>
+      <div class="resume-backdrop" data-close-services></div>
+      <article class="resume-panel launch-dialog">
+        <button class="resume-close" type="button" aria-label="Close services" data-close-services>
+          <span></span>
+          <span></span>
+        </button>
+        <div class="resume-header">
           <p class="eyebrow">Capabilities</p>
-          <h2>What I can build for you.</h2>
+          <h2 id="servicesTitle">What I can build for you.</h2>
+          <p>POS systems, brand websites, full-stack apps, and business tools built around how you work.</p>
         </div>
         <div class="service-list">
           <article>
@@ -566,13 +582,21 @@
             <p>Layout cleanup, mobile fixes, interaction improvements, and visual systems that feel finished.</p>
           </article>
         </div>
-      </section>
+      </article>
+    </div>
 
-
-      <section class="section process-section" id="process">
-        <div class="section-heading">
+    <!-- Process popup (opened by [data-open-process]) -->
+    <div class="resume-modal launch-modal" id="processModal" role="dialog" aria-modal="true" aria-labelledby="processTitle" hidden>
+      <div class="resume-backdrop" data-close-process></div>
+      <article class="resume-panel launch-dialog">
+        <button class="resume-close" type="button" aria-label="Close process" data-close-process>
+          <span></span>
+          <span></span>
+        </button>
+        <div class="resume-header">
           <p class="eyebrow">Workflow</p>
-          <h2>A clear path from idea to launch.</h2>
+          <h2 id="processTitle">A clear path from idea to launch.</h2>
+          <p>Four steps every project moves through, from the first idea to going live.</p>
         </div>
         <div class="timeline">
           <article>
@@ -592,78 +616,10 @@
             <p>Prepare deployment, final assets, contact flow, and future update points.</p>
           </article>
         </div>
-      </section>
+      </article>
+    </div>
 
-
-
-    <section class="contact-section" id="contact">
-      <div class="contact-copy">
-        <p class="eyebrow">Contact</p>
-        <h2>Tell me what you want to build.</h2>
-        <p>
-          Have a project, an idea, or a question? Send me a message and I'll get
-          back to you by email.
-        </p>
-        <!-- <a class="contact-email" href="mailto:v.clainer11@gmail.com">v.clainer11@gmail.com</a> -->
-      </div>
-
-      <form action="https://api.web3forms.com/submit" method="POST" class="contact-form" id="contactForm">
-        <input type="hidden" name="access_key" value="bdadfbc7-884d-4579-ac6b-cfbb42e64705" />
-        <input type="hidden" name="subject" value="New portfolio inquiry" />
-        <input type="checkbox" name="botcheck" class="form-botcheck" tabindex="-1" autocomplete="off" />
-
-        <label for="contactName">Name</label>
-        <input id="contactName" type="text" name="name" placeholder="Your name" autocomplete="name" required />
-
-        <label for="contactEmail">Email</label>
-        <input id="contactEmail" type="email" name="email" placeholder="you@example.com" autocomplete="email" required />
-
-        <label for="contactMessage">Message</label>
-        <textarea id="contactMessage" name="message" rows="6" placeholder="Tell me about your project or ask a question..." required></textarea>
-
-        <button class="button contact-submit" type="submit">Send message</button>
-        <p class="form-status" role="status" aria-live="polite"></p>
-      </form>
-    </section>
-    </main>
-
-
-
-    <footer class="portfolio-footer">
-      <div class="footer-main">
-        <a class="footer-mark" href="#home" aria-label="Back to top">
-          <span>CV7</span>
-          <strong>Clainer Ventura</strong>
-        </a>
-        <p>Full-stack developer building POS systems, brand websites, dashboards, creative media platforms, and polished digital experiences for the Limitless project network.</p>
-      </div>
-
-      <div class="footer-column">
-        <h2>Explore</h2>
-        <nav aria-label="Footer navigation">
-          <a href="#work">Projects</a>
-          <a href="#services">Services</a>
-          <a href="#process">Process</a>
-          <a href="#contact">Contact</a>
-        </nav>
-      </div>
-
-      <div class="footer-column">
-        <h2>Connect</h2>
-        <a href="#contact">v.clainer11@gmail.com</a>
-        <a href="https://clainerDev.com/" target="_blank" rel="noreferrer">ClainerDev.com</a>
-        <a href="https://ko-fi.com/devs_support" target="_blank" rel="noreferrer">Support projects</a>
-      </div>
-
-      <div class="footer-bottom">
-        <span>Universal Limitless LLC</span>
-        <span>Designed by Clainer Ventura</span>
-        <span>2026 All rights reserved.</span>
-      </div>
-    </footer>
-
-
-
+    <!-- Bio popup (opened by [data-open-bio]) -->
     <div class="resume-modal bio-modal" role="dialog" aria-modal="true" aria-labelledby="bioTitle" hidden>
       <div class="resume-backdrop" data-close-bio></div>
       <article class="resume-panel bio-dialog">
@@ -684,9 +640,6 @@
               <button class="tag-toggle-button" type="button" aria-expanded="false" aria-controls="bioAbout" data-tag-toggle>About Me</button>
               <div class="bio-about-copy tag-toggle-list" id="bioAbout" hidden>
 
-            
-            
-            
             <p>I’m Clainer Ventura, a Full-Stack Software Developer and Creative Technologist with 6+ years of experience building digital experiences, business tools, and interactive solutions.
 
             <br>
@@ -694,7 +647,7 @@
             My work spans frontend and backend development, using technologies such as HTML, CSS, JavaScript, React, Node.js, MySQL, Git, GitHub, Docker, and Linux. I work across the full development lifecycle, from designing responsive UI/UX systems and building user-facing interfaces to developing backend functionality, managing databases, writing queries, and organizing application data.
             <br>
             <br>
-            
+
             I’m also experienced with VS Code, MySQL Workbench, PowerShell, Linux Terminal, Git Bash, and modern development workflows, giving me the ability to build, manage, test, and deploy applications across different environments.
             <br>
             <br>
@@ -703,15 +656,13 @@
             </p>
               </div>
             </div>
-            
-            
-            
+
             <!-- <p>I am Clainer Ventura, Innovative Full-Stack Developer, Programmer, Game Developer, 3D Artist, UI/UX Designer, Video Editor, with 6+ years of experience creating engaging digital experiences across web and interactive entertainment platforms. Skilled in modern development environments, including VS Code, HTML, CSS, JavaScript, and React, MySQL with a strong understanding of responsive design, UI/UX best practices, and performance optimization.</p> -->
 
             <!-- <p>
               Equally experienced in real-time 3D and game production using Unreal Engine, Unity, Blender, and Epic Games tools to develop immersive, high-quality gameplay features and visual assets. Passionate about creative problem-solving, smooth user interactions, and continual learning to deliver polished results that enhance how people play and engage online.
             </p> -->
-            
+
             <!-- <p>I'm a multidisciplinary creator with expertise in Front-end development, UX/UI Design, Game Development, 3D Digital Art, and video editing. My work bridges the gap between interactive technology and visual storytelling — crafting immersive experiences through clean code, dynamic visuals, and cinematic motion.
             </p> -->
 
@@ -722,12 +673,10 @@
               look sharp and actually operate well.
             </p> -->
 
-
             <!-- <p>
               The goal for this portfolio is to present the Limitless projects, my developer skills, and
               my creative services with a cleaner, more professional web presence.
             </p> -->
-
 
           </section>
           <section>
@@ -784,6 +733,7 @@
       </article>
     </div>
 
+    <!-- Resume popup (opened by [data-open-resume]) -->
     <div class="resume-modal" role="dialog" aria-modal="true" aria-labelledby="resumeTitle" hidden>
       <div class="resume-backdrop" data-close-resume></div>
       <article class="resume-panel">
@@ -796,24 +746,13 @@
           <p class="eyebrow">Resume</p>
           <h2 id="resumeTitle">Clainer Ventura</h2>
 
-
-
-
           <!-- <p>Full-stack developer focused on responsive web apps, business tools, APIs, and practical digital systems.</p> -->
-          
-          
-          
+
           <p>Full-Stack Software Developer - Engineer </p>
-
-
-
 
           <a class="button secondary" href="./resume.pdf" target="_blank" rel="noopener noreferrer">View Resume PDF</a>
 
           <a class="button secondary" href="./resume.pdf" download>Download Resume PDF</a>
-
-
-
 
         </div>
 
@@ -825,9 +764,6 @@
             </p>
           </section>
 
-
-
-
           <section>
             <h3>Skills:</h3>
             <ul class="resume-tags">
@@ -837,7 +773,6 @@
               <li>Troubleshooting</li>
               <li>Project Management</li>
               <li>Collaboration</li>
-
 
               <li>Full-Stack Software Developer</li>
               <li>Frontend</li>
@@ -874,12 +809,9 @@
               <li>3D Modeling</li>
               <li>Game Developer</li>
 
-
             </ul>
           </section>
-          
-          
-          
+
           <section>
             <h3>Computer Software:</h3>
             <ul class="resume-tags">
@@ -906,59 +838,36 @@
               <li>APIs</li>
               <li>REST APIs</li>
 
-              
               <li>Microsoft Office</li>
               <li>Adobe</li>
-              
-              
+
               <li>Premiere Pro</li>
               <li>After Effects</li>
               <li>DaVinci Resolve</li>
               <li>Houdini</li>
-              
 
               <li>Unreal Engine</li>
               <li>Blender</li>
               <li>Epic Games</li>
 
-
               <li>GitHub</li>
               <li>Git</li>
               <li>Git Bash</li>
 
-
-
-
-
             </ul>
           </section>
 
-
-
-
-
-
-
           <section>
 
-
-            
-            
             <h3>UniversalLimitless.com</h3>
-
-
 
             <div class="resume-item" data-resume-details>
               <strong>Full-Stack Developer</strong>
               <strong>Software Engineer</strong>
               <strong>Database Management</strong>
               <strong>Queries/MySQL</strong>
-              
-              
+
               <p class="eyebrow">2020-Present</p>
-
-
-
 
             <span>
               Skills:
@@ -995,8 +904,6 @@
               <li>Project Management</li>
             </ul>
 
-
-
             <p><strong>LimitlessVisual.com:</strong> Built a full-stack business platform for payments, orders, inventory, customers, and admin tools, connected to a cloud database on Railway.</p>
             <p><strong>Payments:</strong> Integrated secure online payment processing into the checkout and order workflows.</p>
             <p><strong>Docker:</strong> Containerized the application with Docker, building images and running containers for consistent development and deployment.</p>
@@ -1005,34 +912,15 @@
             <p><strong>Networking &amp; Security:</strong> Set up secure remote access with SSH public/private key authentication, configured SSH authentication settings, applied VPN security, and worked in a Kali Linux environment.</p>
             <p><strong>Workflow:</strong> Used Git/GitHub for version control and Linux/PowerShell terminals for debugging, testing, and deployment.</p>
 
-
-
             </div>
 
-
-
-
-
-
-
-
-            
-
-
-
           </section>
-          
-          
+
           <br>
-         
-
-
 
           <h3>Career Experience:</h3>
 
-
           <section>
-
 
             <div class="resume-item" data-resume-details>
               <strong>Red Apple Real Estate - The Margo</strong>
@@ -1044,56 +932,37 @@
 
             </div>
 
-
-
-
-
-
             <div class="resume-item" data-resume-details>
               <strong>First Service Residential - American Copper Towers</strong>
               <p class="eyebrow">Concierge 05/2018 - 06/2020</p>
-              
+
               <span>626 1st Ave N.Y. 10003</span>
-              
+
               <p>Liaison between departments, staff, residents enhancing customer services.</p>
               <p>Maintained detailed records of maintenance activities, repairs, and equipment. </p>
               <p>Implemented emergency procedures and coordinating necessary actions.  </p>
 
-
             </div>
-
-
-
-
-
 
             <div class="resume-item" data-resume-details>
               <strong>Jardan Management Corp.</strong>
               <p class="eyebrow">Concierge 10/2015 - 05/2018</p>
-              
+
               <span>85 Fourth Ave NY 10003</span>
-              
+
               <p>Greeted visitors and ensured their questions and needs were fulfilled. </p>
               <p>Inventory logs, receive packages, phone call/Emails inquiries. </p>
               <p>Monitored surveillance equipment to prevent unauthorized facility entry. </p>
 
-
             </div>
 
-
-            
-
-
           </section>
-
-
 
           <br>
 
           <section>
             <h3>Education:</h3>
-            
-            
+
             <div class="resume-item">
               <strong>Class Central</strong>
               <p>Gained hands-on experience with modern frameworks and best practices.</p>
@@ -1117,19 +986,9 @@
               <p>Completed 65 credits toward Bachelor of Criminal Justice.</p>
             </div>
 
-
-
-
-
-
           </section>
 
-
           <br>
-
-
-
-
 
         </div>
       </article>
