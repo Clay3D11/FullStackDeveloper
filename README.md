@@ -11,8 +11,9 @@ The site is built with **vanilla HTML, CSS, and JavaScript**. It uses no framewo
 
 - **Dark, responsive design** that works on phones, tablets, and desktops
 - **Project showcase**: a compact card on the page opens a Projects popup with live links to each project, expandable details, and tech tags
-- **Services, process, and contact cards**: matching compact cards open the Services (capabilities), Process (workflow), and Contact popups
-- **Projects, services, process, contact, bio, and resume popups**: open, close, and Escape-key handling are written in plain JavaScript
+- **Stats, services, process, and contact cards**: matching compact cards open the Stats (highlights), Services (capabilities), Process (workflow), and Contact popups
+- **Road maps and core skills popups**: the hero shows two small buttons instead of long tag lists
+- **Road maps, core skills, stats, projects, services, process, contact, bio, and resume popups**: open, close, and Escape-key handling are written in plain JavaScript
 - **Downloadable resume** (`resume.pdf`)
 - **Contact form**: lives in the Contact popup and sends messages through the [Web3Forms](https://web3forms.com) API with `fetch`, shows loading, success, and error states, and includes a spam honeypot
 - **Scroll animations** built on `IntersectionObserver`, which turn off automatically when the visitor prefers reduced motion
@@ -36,9 +37,9 @@ HTML5 · CSS3 (Grid, Flexbox, custom properties, container queries) · JavaScrip
 ## Project structure
 
 ```
-├── index.html     # Page markup: hero, projects/services/process/contact cards, and the projects, services, process, contact, bio, and resume popups
+├── index.html     # Page markup: hero, stats/projects/services/process/contact cards, and the stats, projects, services, process, contact, bio, and resume popups
 ├── style.css      # Theme, layout, and responsive styles
-├── script.js      # Toggles, projects/services/process/contact cards, scroll animations, menu, popups, and contact form
+├── script.js      # Toggles, stats/projects/services/process/contact cards, scroll animations, menu, popups, and contact form
 ├── resume.pdf     # Downloadable resume
 ├── assets/        # Images and project previews
 ├── CNAME          # Custom domain (clainerdev.com)

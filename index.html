@@ -63,120 +63,40 @@
             Available for new projects
           </div>
           <!-- <p class="eyebrow">| Full-stack developer |</p> -->
-          <p>
+          <!-- <p>
             I'm a Full-Stack Developer specializing in modern web applications, scalable digital systems, and user-focused experiences powered by creativity and clean engineering.
-          </p>
+          </p> -->
           <div class="hero-actions">
             <a class="button primary" href="#contact" data-open-contact>Start a project</a>
             <button class="button secondary" type="button" data-open-bio>About me!</button>
             <!-- <button class="button secondary" type="button" data-open-resume>Resume</button> -->
             <!-- <a class="button secondary" href="./Resume.pdf" target="_blank">Resume PDF</a> -->
             <button class="button secondary" type="button" data-open-projects>View work</button>
-
-            <!-- Road maps (roadmap.sh) -->
-            <nav class="roadmap-grid" aria-label="Developer road maps">
-              <a class="button primary" href="https://roadmap.sh/dashboard">◈Road Maps◈</a>
-              <a class="button secondary" href="https://roadmap.sh/full-stack">Full-Stack</a>
-              <a class="button secondary" href="https://roadmap.sh/frontend">Frontend</a>
-              <a class="button secondary" href="https://roadmap.sh/backend">Backend</a>
-              <a class="button secondary" href="https://roadmap.sh/git-github">Git-GitHub</a>
-              <a class="button secondary" href="https://roadmap.sh/docker">Docker</a>
-              <a class="button secondary" href="https://roadmap.sh/sql">MySQL</a>
-              <a class="button secondary" href="https://roadmap.sh/nodejs">Node.js</a>
-              <a class="button secondary" href="https://roadmap.sh/javascript">JavaScript</a>
-              <a class="button secondary" href="https://roadmap.sh/linux">Linux</a>
-              <a class="button secondary" href="https://roadmap.sh/shell-bash">Shell-Bash</a>
-              <a class="button secondary" href="https://roadmap.sh/api-security-best-practices">API Security</a>
-              <a class="button secondary" href="https://roadmap.sh/system-design">System Design</a>
-            </nav>
           </div>
-          <div class="tag-toggle hero-skill-toggle">
-            <button class="tag-toggle-button" type="button" aria-expanded="false" aria-controls="heroSkills" data-tag-toggle>
-              View core skills
-            </button>
-            <ul class="hero-skills tag-toggle-list" id="heroSkills" aria-label="Core skills" hidden>
-              <li>Full-Stack Software Developer</li>
-              <li>Frontend</li>
-              <li>Backend</li>
-              <li>Business Development</li>
-              <li>Business tools</li>
-              <li>Creative media</li>
-              <li>VS Code Editor</li>
-              <li>HTML</li>
-              <li>CSS</li>
-              <li>UX/UI systems</li>
-              <li>JavaScript</li>
-              <li>React</li>
-              <li>Node.js</li>
-              <li>GitHub</li>
-              <li>Git</li>
-              <li>Git Bash</li>
-              <li>Docker</li>
-              <li>MySQL</li>
-              <li>MySQL Workbench</li>
-              <li>PowerShell Terminal</li>
-              <li>Linux Terminal</li>
-              <li>Linux</li>
-              <li>Network Security</li>
-              <li>SSH</li>
-              <li>SSH Key Authentication (Public/Private Keys)</li>
-              <li>SSH Authentication Settings</li>
-              <li>VPN Security</li>
-              <li>Kali Linux</li>
-              <li>Databases</li>
-              <li>Queries</li>
-              <li>Data Management</li>
-              <li>Video Editor</li>
-              <li>3D Modeling</li>
-              <li>Game Developer</li>
-            </ul>
+
+          <!-- Road maps + core skills: each button opens its popup -->
+          <div class="hero-tag-buttons">
+            <button class="tag-toggle-button" type="button" data-open-roadmaps aria-haspopup="dialog">View road maps</button>
+            <button class="tag-toggle-button" type="button" data-open-skills aria-haspopup="dialog">View core skills</button>
           </div>
         </div>
       </section>
 
-      <!-- Stats -->
-      <section class="stats-band" aria-label="Portfolio highlights">
-        <article>
-          <strong>20+</strong>
-          <span>web concepts built</span>
-        </article>
-
-        <!-- <article>
-
-          <strong>6</strong>
-          <span>Core Specialties</span>
-
-          <span>Full-Stack Software Developer</span>
-
-          <span>Game Developer</span>
-
-          <span>UX/UI Designer</span>
-
-          <span>3D Artist</span>
-
-          <span>Video Editor</span>
-
-          <span>Programmer</span>
-
-          <span>Creative Media</span>
-
-          <span>Business Tools</span>
-
-        </article> -->
-
-        <article>
-          <strong>100%</strong>
-          <span>custom implementation</span>
-        </article>
-        <article>
-          <strong>5</strong>
-          <strong>Business Applications</strong>
-          <span><h4>UniversalLimitless.com</h4></span>
-          <span><h4>LimitlessVisual.com</h4></span>
-          <span><h4>LimitlessReels.com</h4></span>
-          <span><h4>LimitlessPOS.co</h4></span>
-          <span><h4>LimitlessFitness.com</h4></span>
-        </article>
+      <!-- Stats: one compact card. The highlights live in the Stats popup (#statsModal). -->
+      <section class="section work-section" id="stats">
+        <button class="work-launch" type="button" data-open-stats aria-haspopup="dialog">
+          <span class="work-launch-text">
+            <span class="eyebrow">Highlights</span>
+            <strong>By the numbers</strong>
+            <span class="work-launch-copy">Web concepts, custom builds, and live business apps.</span>
+          </span>
+          <!-- One pill per highlight number, added by script.js -->
+          <span class="work-launch-previews launch-badges launch-numbers" aria-hidden="true" data-preview-for="#statsModal .stats-band article > strong:first-child"></span>
+          <span class="work-launch-cta">
+            <span class="work-launch-count"><b data-count-for="#statsModal .stats-band article">0</b> highlights</span>
+            <span class="work-launch-open">View highlights <span aria-hidden="true">&rarr;</span></span>
+          </span>
+        </button>
       </section>
 
       <!-- Projects: one compact card. The project cards live in the Projects popup (#projectsModal). -->
@@ -250,6 +170,7 @@
 
     <!-- ==================== Footer ==================== -->
     <footer class="portfolio-footer">
+      <!-- Brand -->
       <div class="footer-main">
         <a class="footer-mark" href="#home" aria-label="Back to top">
           <span>CV7</span>
@@ -258,31 +179,180 @@
         <p>Full-stack developer building POS systems, brand websites, dashboards, creative media platforms, and polished digital experiences for the Limitless project network.</p>
       </div>
 
+      <!-- Explore: each link opens its popup -->
       <div class="footer-column">
         <h2>Explore</h2>
-        <nav aria-label="Footer navigation">
+        <nav class="footer-links footer-explore" aria-label="Footer navigation">
+          <a href="#stats" data-open-stats>Highlights</a>
           <a href="#work" data-open-projects>Projects</a>
           <a href="#services" data-open-services>Services</a>
           <a href="#process" data-open-process>Process</a>
+          <a href="#home" data-open-bio>Bio</a>
           <a href="#contact" data-open-contact>Contact</a>
         </nav>
       </div>
 
+      <!-- Connect -->
       <div class="footer-column">
         <h2>Connect</h2>
-        <a href="#contact" data-open-contact>v.clainer11@gmail.com</a>
-        <a href="https://clainerDev.com/" target="_blank" rel="noreferrer">ClainerDev.com</a>
-        <a href="https://ko-fi.com/devs_support" target="_blank" rel="noreferrer">Support projects</a>
+        <div class="footer-links">
+          <a href="#contact" data-open-contact>v.clainer11@gmail.com</a>
+          <a href="https://clainerDev.com/" target="_blank" rel="noreferrer">ClainerDev.com</a>
+          <a href="https://ko-fi.com/devs_support" target="_blank" rel="noreferrer">Support projects</a>
+        </div>
       </div>
 
+      <!-- Bottom bar -->
       <div class="footer-bottom">
-        <span>Universal Limitless LLC</span>
+        <span>&copy; 2026 Universal Limitless LLC. All rights reserved.</span>
         <span>Designed by Clainer Ventura</span>
-        <span>2026 All rights reserved.</span>
+        <a class="footer-top" href="#home">Back to top <span aria-hidden="true">&uarr;</span></a>
       </div>
     </footer>
 
     <!-- ==================== Popups ==================== -->
+
+    <!-- Road maps popup (opened by [data-open-roadmaps]) -->
+    <div class="resume-modal launch-modal" id="roadmapsModal" role="dialog" aria-modal="true" aria-labelledby="roadmapsTitle" hidden>
+      <div class="resume-backdrop" data-close-roadmaps></div>
+      <article class="resume-panel launch-dialog tags-dialog">
+        <button class="resume-close" type="button" aria-label="Close road maps" data-close-roadmaps>
+          <span></span>
+          <span></span>
+        </button>
+        <div class="resume-header">
+          <p class="eyebrow">Learning paths</p>
+          <h2 id="roadmapsTitle">Developer road maps</h2>
+          <p>The roadmap.sh guides I follow across the full stack, from front end to system design.</p>
+        </div>
+        <nav class="roadmap-grid" aria-label="Developer road maps">
+          <a class="button primary" href="https://roadmap.sh/dashboard">◈Road Maps◈</a>
+          <a class="button secondary" href="https://roadmap.sh/full-stack">Full-Stack</a>
+          <a class="button secondary" href="https://roadmap.sh/frontend">Frontend</a>
+          <a class="button secondary" href="https://roadmap.sh/backend">Backend</a>
+          <a class="button secondary" href="https://roadmap.sh/git-github">Git-GitHub</a>
+          <a class="button secondary" href="https://roadmap.sh/docker">Docker</a>
+          <a class="button secondary" href="https://roadmap.sh/sql">MySQL</a>
+          <a class="button secondary" href="https://roadmap.sh/nodejs">Node.js</a>
+          <a class="button secondary" href="https://roadmap.sh/javascript">JavaScript</a>
+          <a class="button secondary" href="https://roadmap.sh/linux">Linux</a>
+          <a class="button secondary" href="https://roadmap.sh/shell-bash">Shell-Bash</a>
+          <a class="button secondary" href="https://roadmap.sh/api-security-best-practices">API Security</a>
+          <a class="button secondary" href="https://roadmap.sh/system-design">System Design</a>
+        </nav>
+      </article>
+    </div>
+
+    <!-- Core skills popup (opened by [data-open-skills]) -->
+    <div class="resume-modal launch-modal" id="skillsModal" role="dialog" aria-modal="true" aria-labelledby="skillsTitle" hidden>
+      <div class="resume-backdrop" data-close-skills></div>
+      <article class="resume-panel launch-dialog tags-dialog">
+        <button class="resume-close" type="button" aria-label="Close core skills" data-close-skills>
+          <span></span>
+          <span></span>
+        </button>
+        <div class="resume-header">
+          <p class="eyebrow">Core skills</p>
+          <h2 id="skillsTitle">What I work with</h2>
+          <p>Languages, tools, and disciplines I use across development, security, and creative media.</p>
+        </div>
+        <ul class="hero-skills" aria-label="Core skills">
+          <li>Full-Stack Software Developer</li>
+          <li>Frontend</li>
+          <li>Backend</li>
+          <li>Business Development</li>
+          <li>Business tools</li>
+          <li>Creative media</li>
+          <li>VS Code Editor</li>
+          <li>HTML</li>
+          <li>CSS</li>
+          <li>UX/UI systems</li>
+          <li>JavaScript</li>
+          <li>React</li>
+          <li>Node.js</li>
+          <li>GitHub</li>
+          <li>Git</li>
+          <li>Git Bash</li>
+          <li>Docker</li>
+          <li>MySQL</li>
+          <li>MySQL Workbench</li>
+          <li>PowerShell Terminal</li>
+          <li>Linux Terminal</li>
+          <li>Linux</li>
+          <li>Network Security</li>
+          <li>SSH</li>
+          <li>SSH Key Authentication (Public/Private Keys)</li>
+          <li>SSH Authentication Settings</li>
+          <li>VPN Security</li>
+          <li>Kali Linux</li>
+          <li>Databases</li>
+          <li>Queries</li>
+          <li>Data Management</li>
+          <li>Video Editor</li>
+          <li>3D Modeling</li>
+          <li>Game Developer</li>
+        </ul>
+      </article>
+    </div>
+
+    <!-- Stats popup (opened by [data-open-stats]) -->
+    <div class="resume-modal launch-modal" id="statsModal" role="dialog" aria-modal="true" aria-labelledby="statsTitle" hidden>
+      <div class="resume-backdrop" data-close-stats></div>
+      <article class="resume-panel launch-dialog">
+        <button class="resume-close" type="button" aria-label="Close highlights" data-close-stats>
+          <span></span>
+          <span></span>
+        </button>
+        <div class="resume-header">
+          <p class="eyebrow">Highlights</p>
+          <h2 id="statsTitle">By the numbers</h2>
+          <p>Web concepts built, custom work, and the business applications running in the Limitless network.</p>
+        </div>
+        <div class="stats-band" aria-label="Portfolio highlights">
+          <article>
+            <strong>20+</strong>
+            <span>web concepts built</span>
+          </article>
+
+          <!-- <article>
+
+            <strong>6</strong>
+            <span>Core Specialties</span>
+
+            <span>Full-Stack Software Developer</span>
+
+            <span>Game Developer</span>
+
+            <span>UX/UI Designer</span>
+
+            <span>3D Artist</span>
+
+            <span>Video Editor</span>
+
+            <span>Programmer</span>
+
+            <span>Creative Media</span>
+
+            <span>Business Tools</span>
+
+          </article> -->
+
+          <article>
+            <strong>100%</strong>
+            <span>custom implementation</span>
+          </article>
+          <article>
+            <strong>5</strong>
+            <strong>Business Applications</strong>
+            <span><h4>UniversalLimitless.com</h4></span>
+            <span><h4>LimitlessVisual.com</h4></span>
+            <span><h4>LimitlessReels.com</h4></span>
+            <span><h4>LimitlessPOS.co</h4></span>
+            <span><h4>LimitlessFitness.com</h4></span>
+          </article>
+        </div>
+      </article>
+    </div>
 
     <!-- Projects popup (opened by [data-open-projects]) -->
     <div class="resume-modal projects-modal" id="projectsModal" role="dialog" aria-modal="true" aria-labelledby="projectsTitle" hidden>

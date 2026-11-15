@@ -1,11 +1,11 @@
 /* ==========================================================================
    ClainerDev.com
    1. Helpers
-   2. Toggles (core skills, resume tags and details, project details)
-   3. Projects, Services, Process, Contact cards + popup content
+   2. Toggles (bio, resume tags and details, project details)
+   3. Stats, Projects, Services, Process, Contact cards + popup content
    4. Scroll reveal
    5. Mobile menu
-   6. Popups (Projects, Services, Process, Contact, Bio, Resume)
+   6. Popups (Road maps, Core skills, Stats, Projects, Services, Process, Contact, Bio, Resume)
    7. Contact form (Web3Forms)
    ========================================================================== */
 
@@ -15,6 +15,9 @@ const $$ = (selector, scope = document) => [...scope.querySelectorAll(selector)]
 
 const menuButton = $(".menu-button");
 const siteNav = $(".site-nav");
+const roadmapsModal = $("#roadmapsModal");
+const skillsModal = $("#skillsModal");
+const statsModal = $("#statsModal");
 const projectsModal = $("#projectsModal");
 const servicesModal = $("#servicesModal");
 const processModal = $("#processModal");
@@ -95,12 +98,12 @@ $$(".resume-body [data-resume-details]").forEach((item, index) => {
   setupToggle(button, details);
 });
 
-/* Toggles written in the HTML (core skills, bio "About Me") */
+/* Toggles written in the HTML (bio "About Me") */
 $$("[data-tag-toggle]").forEach((button) => {
   setupToggle(button, document.getElementById(button.getAttribute("aria-controls")));
 });
 
-/* ---------- 3. Projects, Services, Process, Contact cards + popup content ---------- */
+/* ---------- 3. Stats, Projects, Services, Process, Contact cards + popup content ---------- */
 const projectCards = $$("#projectsModal .project-card");
 
 /* Each card: description and tags collapse behind "View details" */
@@ -145,7 +148,7 @@ projectCards.forEach((card) => {
 /* Landing card: project count + one small preview per card (cover classes come from the cards) */
 $$("[data-project-count]").forEach((el) => (el.textContent = projectCards.length));
 
-const launchPreviews = $(".work-launch-previews");
+const launchPreviews = $("#work .work-launch-previews");
 projectCards.forEach((card) => {
   const cover = [...($(".project-visual", card)?.classList || [])].find((name) => name.startsWith("visual-"));
   if (!launchPreviews || !cover) return;
@@ -155,7 +158,7 @@ projectCards.forEach((card) => {
   launchPreviews.append(thumb);
 });
 
-/* Services, Process, Contact cards: count and previews come from the popup content.
+/* Stats, Services, Process, Contact cards: count and previews come from the popup content.
    [data-count-for="<selector>"] shows how many items match,
    [data-preview-for="<selector>"] gets one small pill per match (its text). */
 $$("[data-count-for]").forEach((el) => (el.textContent = $$(el.dataset.countFor).length));
@@ -170,7 +173,7 @@ $$("[data-preview-for]").forEach((previews) => {
 });
 
 /* ---------- 4. Scroll reveal ---------- */
-const revealItems = $$(".stats-band article, .section-heading, .work-launch");
+const revealItems = $$(".section-heading, .work-launch");
 
 if ("IntersectionObserver" in window) {
   const revealObserver = new IntersectionObserver(
@@ -223,7 +226,7 @@ function closeModal(modal) {
 }
 
 /* [data-open-<name>] opens a popup, [data-close-<name>] closes it */
-const popups = { projects: projectsModal, services: servicesModal, process: processModal, contact: contactModal, bio: bioModal, resume: resumeModal };
+const popups = { roadmaps: roadmapsModal, skills: skillsModal, stats: statsModal, projects: projectsModal, services: servicesModal, process: processModal, contact: contactModal, bio: bioModal, resume: resumeModal };
 
 Object.entries(popups).forEach(([name, modal]) => {
   $$(`[data-open-${name}]`).forEach((opener) => {

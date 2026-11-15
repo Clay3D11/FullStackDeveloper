@@ -267,15 +267,27 @@ h3 {
   margin-top: 32px
 }
 
-/* Road map links: grouped into a tidy chip row under the main buttons */
+/* "View road maps" + "View core skills": side by side under the main buttons */
+.hero-tag-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px dashed var(--line-strong)
+}
+
+/* Road maps + Core skills popups: chip grids */
+.resume-panel.tags-dialog { width: min(760px, calc(100vw - 28px)) }
+
+.tags-dialog .roadmap-grid,
+.tags-dialog .hero-skills { margin: 0; padding: 22px clamp(16px, 3vw, 32px) 32px }
+
+/* Road map links */
 .roadmap-grid {
   display: flex;
   flex-wrap: wrap;
-  gap: 8px;
-  width: 100%;
-  margin-top: 10px;
-  padding-top: 20px;
-  border-top: 1px dashed var(--line-strong)
+  gap: 8px
 }
 
 .roadmap-grid .button {
@@ -505,7 +517,7 @@ h3 {
 
 pre { margin: 0; padding: 20px; white-space: pre-wrap }
 
-/* ---------- Stats band ---------- */
+/* ---------- Stats band (inside the Stats popup) ---------- */
 .stats-band {
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 2.2fr);
@@ -690,6 +702,8 @@ pre { margin: 0; padding: 20px; white-space: pre-wrap }
 
 .launch-badges .work-launch-pill { width: 44px; height: 44px; padding: 0; background: var(--bg-2) }
 
+.launch-numbers .work-launch-pill { width: auto; min-width: 56px; padding: 0 14px; font-size: .95rem; letter-spacing: 0 }
+
 /* Arrow between steps, sitting in the gap */
 .launch-steps { gap: 8px 22px }
 
@@ -756,6 +770,12 @@ pre { margin: 0; padding: 20px; white-space: pre-wrap }
 .launch-dialog .timeline p { margin-bottom: 0 }
 
 .launch-dialog .timeline article:before { margin-bottom: 16px }
+
+.launch-dialog .stats-band {
+  width: auto;
+  margin: 22px clamp(16px, 3vw, 32px) 32px;
+  box-shadow: none
+}
 
 .project-grid,
 .service-list {
@@ -1181,9 +1201,10 @@ li.projects-tags {
   font-size: 1rem
 }
 
-.footer-column { display: grid; gap: 12px }
+.footer-column { display: grid; gap: 16px; min-width: 0 }
 
 .footer-column h2 {
+  margin: 0;
   color: var(--accent);
   font-family: var(--mono);
   font-size: .76rem;
@@ -1193,29 +1214,42 @@ li.projects-tags {
   text-transform: uppercase
 }
 
-.footer-column nav { display: grid; gap: 10px }
+/* Link lists: one per line on desktop, Explore in two columns */
+.footer-links { display: grid; gap: 10px }
 
-.footer-column a {
+.footer-explore { grid-template-columns: repeat(2, max-content); column-gap: 32px }
+
+.footer-links a {
   width: max-content;
   max-width: 100%;
   color: var(--text-soft);
   font-weight: 600;
+  overflow-wrap: anywhere;
   transition: color .18s ease, transform .18s ease
 }
 
-.footer-column a:hover { color: #fff; transform: translateX(4px) }
+.footer-links a:hover { color: #fff; transform: translateX(4px) }
 
 .footer-bottom {
   grid-column: 1 / -1;
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
   justify-content: space-between;
-  gap: 12px;
+  gap: 8px 20px;
   border-top: 1px solid var(--line);
-  padding-top: 24px;
+  padding-top: 22px;
   color: rgba(255, 255, 255, .45);
   font-size: .86rem
 }
+
+.footer-top {
+  color: var(--text-soft);
+  font-weight: 700;
+  transition: color .18s ease
+}
+
+.footer-top:hover { color: #fff }
 
 /* ---------- Modals (Bio + Resume) ---------- */
 .resume-modal {
@@ -1456,7 +1490,9 @@ li.projects-tags {
 
   .timeline { grid-template-columns: repeat(2, minmax(0, 1fr)) }
 
-  .portfolio-footer { grid-template-columns: minmax(0, 1fr) }
+  /* Footer: brand on top, Explore + Connect side by side */
+  .portfolio-footer { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 32px }
+  .footer-main { grid-column: 1 / -1 }
 }
 
 @media (max-width: 720px) {
@@ -1542,9 +1578,9 @@ li.projects-tags {
   .availability-pill,
   .hero-actions,
   .hero-skills,
-  .hero-skill-toggle { justify-content: center }
+  .hero-tag-buttons { justify-content: center }
 
-  .hero-skill-toggle { justify-items: center }
+  .hero-tag-buttons .tag-toggle-button { flex: 1 1 0; padding: 0 12px }
 
   .hero-actions { gap: 10px }
 
@@ -1567,7 +1603,46 @@ li.projects-tags {
   .service-list article:last-child,
   #projectsModal .project-card:last-child { grid-column: auto }
 
-  .footer-bottom { flex-direction: column }
+  /* Footer: centered, links become compact wrapping chips */
+  .portfolio-footer {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 24px;
+    padding: 40px 16px 20px;
+    text-align: center
+  }
+
+  .footer-main { display: grid; justify-items: center }
+  .footer-mark { margin-bottom: 12px }
+  .footer-main p { font-size: .92rem }
+
+  .footer-column { gap: 12px; justify-items: center }
+
+  .footer-links,
+  .footer-explore {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px
+  }
+
+  .footer-links a {
+    padding: 7px 14px;
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    background: rgba(255, 255, 255, .04);
+    font-size: .86rem
+  }
+
+  .footer-links a:hover { border-color: var(--line-strong); transform: none }
+
+  .footer-bottom {
+    flex-direction: column;
+    gap: 6px;
+    padding-top: 18px;
+    font-size: .8rem
+  }
+
+  .footer-top { margin-top: 6px }
 
   .resume-modal { padding: 10px }
 
