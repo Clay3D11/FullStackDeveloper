@@ -606,6 +606,11 @@ pre { margin: 0; padding: 20px; white-space: pre-wrap }
 
 .work-section + .work-section { padding-top: 0 } /* Projects, Services, Process cards stack tightly */
 
+/* Wrapper for Highlights, Projects, Services, Process. Invisible on desktop; a 2x2 grid on mobile */
+.launch-grid { display: contents }
+
+.launch-grid + .work-section { padding-top: 0 } /* Contact keeps stacking tightly under Process */
+
 .work-launch {
   display: grid;
   grid-template-columns: auto minmax(0, 1fr) auto;
@@ -1493,6 +1498,63 @@ li.projects-tags {
   /* Footer: brand on top, Explore + Connect side by side */
   .portfolio-footer { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 32px }
   .footer-main { grid-column: 1 / -1 }
+}
+
+/* Mobile: Highlights, Projects, Services, Process as 4 square cards, 2x2, like LimitlessVisual */
+@media (max-width: 720px) {
+  .launch-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-auto-rows: 1fr;
+    gap: 10px;
+    padding: 20px max(5vw, 16px)
+  }
+
+  .launch-grid .work-section { display: flex; padding: 0; content-visibility: visible; contain-intrinsic-size: auto }
+
+  .launch-grid .work-launch {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    align-items: stretch;
+    justify-content: space-between;
+    gap: 10px;
+    min-height: calc((100vw - 2 * max(5vw, 16px) - 10px) / 2); /* at least square */
+    padding: 16px 12px;
+    text-align: left
+  }
+
+  .launch-grid .work-launch-text strong { font-size: 1.15rem }
+  .launch-grid .work-launch-text strong:before { width: 28px; height: 3px; margin: 6px 0 8px }
+  .launch-grid .work-launch .eyebrow { font-size: .62rem }
+  .launch-grid .work-launch-copy { font-size: .74rem; line-height: 1.35 }
+
+  .launch-grid .work-launch-previews { justify-content: flex-start; padding-left: 14px }
+  .launch-grid .work-launch-thumb { flex-basis: 56px; margin-left: -14px; border-width: 1px }
+  .launch-grid .launch-badges,
+  .launch-grid .launch-steps { gap: 4px; padding-left: 0 }
+  .launch-grid .work-launch-pill { min-height: 24px; padding: 0 6px; border-radius: 7px; font-size: .58rem }
+  .launch-grid .launch-badges .work-launch-pill { width: 26px; height: 26px; padding: 0 }
+  .launch-grid .launch-numbers .work-launch-pill { width: auto; min-width: 0; padding: 0 6px; font-size: .66rem }
+  .launch-grid .launch-steps .work-launch-pill + .work-launch-pill:before { content: none }
+
+  .launch-grid .work-launch-cta { justify-items: stretch; gap: 6px }
+  .launch-grid .work-launch-count { font-size: .7rem }
+  .launch-grid .work-launch-open {
+    min-height: 36px;
+    justify-content: center;
+    padding: 0 8px;
+    font-size: .72rem;
+    white-space: normal;
+    text-align: center
+  }
+}
+
+@media (max-width: 360px) {
+  .launch-grid { gap: 8px }
+  .launch-grid .work-launch { padding: 14px 9px }
+  .launch-grid .work-launch-text strong { font-size: 1rem }
+  .launch-grid .work-launch-copy { display: none }
 }
 
 @media (max-width: 720px) {
