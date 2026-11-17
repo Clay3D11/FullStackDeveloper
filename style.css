@@ -1654,6 +1654,8 @@ li.projects-tags {
 
   .hero-actions > .button { flex: 1 1 100% }
 
+  .hero-actions > .button.secondary { flex: 1 1 0; padding-inline: 12px } /* About me! + View work side by side */
+
   .roadmap-grid { justify-content: center }
 
   .roadmap-grid > .button:first-child { flex: 1 1 100% }
