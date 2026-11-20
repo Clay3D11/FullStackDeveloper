@@ -1000,7 +1000,7 @@ li.projects-tags {
 .visual-universal { background: url("assets/uni.png") top center / cover }
 .visual-pos { background: url("assets/POS.png") center / cover }
 .visual-reels { background: url("assets/LReelsCover.png") center 70% / cover }
-.visual-pamrealtor { background: url("assets/pamrealtor.png") center / cover }
+.visual-pamrealtor { background: url("assets/pamrealtor.webp") center / cover }
 .visual-music { background: url("assets/10.gif") center / cover }
 .visual-commerce { background: linear-gradient(135deg, var(--blue), var(--gold)) }
 .visual-visual { background: url("assets/31.jpg") center / cover }
