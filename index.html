@@ -734,7 +734,11 @@
               <button class="tag-toggle-button" type="button" aria-expanded="false" aria-controls="bioAbout" data-tag-toggle>About Me</button>
               <div class="bio-about-copy tag-toggle-list" id="bioAbout" hidden>
 
-            <p>I’m Clainer Ventura, a Full-Stack Software Developer and Creative Technologist with 6+ years of experience building digital experiences, business tools, and interactive solutions.
+            <!-- Mobile-only short bio (full bio below shows on desktop) -->
+            <p class="bio-short">I’m Clainer Ventura, a Full-Stack Developer and Creative Technologist with 6+ years of experience. I build the full stack, from responsive UI/UX to backend logic and MySQL databases, using HTML, CSS, JavaScript, React, Node.js, Docker, Git/GitHub, and Linux.</p>
+            <p class="bio-short">I also bring video editing, 3D modeling, and game development, so I build practical products that connect software, data, business, and creativity.</p>
+
+            <p class="bio-full">I’m Clainer Ventura, a Full-Stack Software Developer and Creative Technologist with 6+ years of experience building digital experiences, business tools, and interactive solutions.
 
             <br>
             <br>
@@ -774,7 +778,7 @@
 
           </section>
           <section>
-            <h3>Highlights</h3>
+            <!-- <h3>Highlights</h3> -->
             <ul class="resume-tags">
               <li>Full-stack apps</li>
               <li>Dashboards</li>
@@ -815,13 +819,9 @@
 
             </ul>
           </section>
-          <section>
-            <h3>Current Direction: (Status)</h3>
-            <p>
-              Focused on building full-stack applications, sharpening real-world development skills, and creating professional software systems that demonstrate problem-solving, innovation, and technical excellence.
-
-            </p>
-          </section>
+          <!-- <section>
+            <p class="status-open" role="status"><span class="status-dot" aria-hidden="true"></span>Available / New Projects</p>
+          </section> -->
           <button class="button secondary bio-resume-button" type="button" data-open-resume>Resume</button>
         </div>
       </article>
@@ -854,8 +854,12 @@
           <section>
             <h3>Career Objective:</h3>
             <p>
-              Motivated Full-Stack Developer with a passion for building modern web applications, scalable software systems, and user-focused digital experiences. Seeking an opportunity to contribute strong problem-solving skills, creativity, and technical expertise in a growth-driven development environment while continuing to expand my knowledge in software engineering and emerging technologies.
+              Motivated Full-Stack Developer with a passion for building modern web applications, scalable software systems, and user-focused digital experiences. 
             </p>
+
+            <!-- <p>Seeking an opportunity to contribute strong problem-solving skills, creativity, and technical expertise in a growth-driven development environment while continuing to expand my knowledge in software engineering and emerging technologies.</p> -->
+
+
           </section>
 
           <section>
@@ -953,7 +957,7 @@
 
           <section>
 
-            <h3>UniversalLimitless.com</h3>
+            <h3>LimitlessReels.com</h3>
 
             <div class="resume-item" data-resume-details>
               <strong>Full-Stack Developer</strong>
@@ -1016,6 +1020,17 @@
 
           <section>
 
+            <!-- Combined card: the three concierge roles (originals commented out below) -->
+            <div class="resume-item" data-resume-details>
+              <strong>Residential Concierge: Jardan Management, FirstService Residential, Red Apple Real Estate</strong>
+              <p class="eyebrow">Concierge 10/2015 - 07/2023</p>
+              <span>Manhattan &amp; Brooklyn, NY</span>
+              <p>Ran front desk operations for high-volume residential buildings: move-ins, reservations, and visitor and resident inquiries by phone and email.</p>
+              <p>Kept accurate records and logs for packages, inventory, maintenance, repairs, and equipment, with timely resident notifications.</p>
+              <p>Coordinated between departments, staff, and residents, and handled security: access monitoring, surveillance, incident reports, and emergency procedures.</p>
+            </div>
+
+            <!-- Original three cards, kept for reuse:
             <div class="resume-item" data-resume-details>
               <strong>Red Apple Real Estate - The Margo</strong>
               <p class="eyebrow">Concierge 07/2021 - 07/2023</p>
@@ -1049,6 +1064,7 @@
               <p>Monitored surveillance equipment to prevent unauthorized facility entry. </p>
 
             </div>
+            -->
 
           </section>
 
