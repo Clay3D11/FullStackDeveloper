@@ -58,7 +58,8 @@ function makeToggle({ wrapperClass, buttonClass = "tag-toggle-button", label, ar
 $$(".resume-body .resume-tags").forEach((list, index) => {
   if (list.closest(".tag-toggle")) return;
 
-  const title = list.closest("section")?.querySelector("h3")?.textContent?.replace(/:$/, "").trim();
+  /* Label comes from data-title on the list (no visible heading), else the section's h3 */
+  const title = list.dataset.title || list.closest("section")?.querySelector("h3")?.textContent?.replace(/:$/, "").trim();
   list.id ||= `resumeTags${index + 1}`;
   list.hidden = true;
   list.classList.add("tag-toggle-list");
