@@ -38,9 +38,11 @@
 
       <!-- Hero: business card, actions, road maps, core skills -->
       <section class="hero-section">
-        <div class="hero-media" aria-hidden="true">
+        <div class="hero-media">
+          <!-- Mobile only: name sits behind the cut-out portrait (z-index below .hero-media:before) -->
+          <h1 class="mobile-only">Clainer Ventura</h1>
           <div class="code-window dev-loop">
-            <div class="tech-orbit">
+            <div class="tech-orbit" aria-hidden="true">
               <img style="--i:0" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg" alt="">
               <img style="--i:1" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg" alt="">
               <img style="--i:2" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" alt="">
@@ -53,11 +55,16 @@
               <img style="--i:9" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg" alt="">
             </div>
             <strong>FULL-STACK DEVELOPER</strong>
+            <div class="availability-pill mobile-only">
+              <span></span>
+              Available for new projects
+            </div>
           </div>
         </div>
         <div id="businesscard" class="hero-copy">
-          <h1>Clainer Ventura</h1>
-          <div class="availability-pill">
+          <!-- Desktop only: name + pill in the business card (mobile versions live in .hero-media) -->
+          <h1 class="desktop-only">Clainer Ventura</h1>
+          <div class="availability-pill desktop-only">
             <span></span>
             Available for new projects
           </div>

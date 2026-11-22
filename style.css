@@ -177,6 +177,7 @@ h1, h2, h3, h4, p { margin-top: 0 }
   max-width: 720px
 }
 
+/* Desktop: name + pill in the business card */
 .hero-copy h1 {
   max-width: 100%;
   margin-bottom: 20px;
@@ -189,6 +190,48 @@ h1, h2, h3, h4, p { margin-top: 0 }
   line-height: 1;
   letter-spacing: -.04em
 }
+
+/* One copy of the name + pill per layout; the other is display:none,
+   so screen readers and search only see one h1 at a time */
+.mobile-only { display: none !important }
+
+@media (max-width: 720px) {
+  .desktop-only { display: none !important }
+  .hero-media { container-type: inline-size } /* mobile name scales with the image width (cqw) */
+  .hero-media h1.mobile-only { display: flex !important }
+  .dev-loop .availability-pill.mobile-only { display: inline-flex !important }
+}
+
+/* Mobile: name inside the hero image, top-centered, behind the cut-out portrait.
+   .hero-media is its own stacking context (isolation); the portrait is
+   :before at z-index -1, so the h1 at -2 paints underneath it. */
+.hero-media h1 {
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start; /* name sits at the top of the image */
+  margin: 0;
+  padding-top: 7%;
+  background: linear-gradient(180deg, #fff 30%, #b9c2dc);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  font-size: 9.5cqw; /* one line: "CLAINER VENTURA" spans ~90% of the image width */
+  font-weight: 900;
+  line-height: .9;
+  letter-spacing: -.04em;
+  text-align: center;
+  text-transform: uppercase;
+  white-space: nowrap;
+  pointer-events: none;
+  user-select: none
+}
+
+/* Pill now sits under FULL-STACK DEVELOPER in the code window */
+.dev-loop .availability-pill { margin: 0 }
 
 .availability-pill {
   display: inline-flex;
